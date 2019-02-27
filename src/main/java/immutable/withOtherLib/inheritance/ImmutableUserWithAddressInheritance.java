@@ -12,9 +12,17 @@ public final class ImmutableUserWithAddressInheritance {
     private final ChildAddress address;
 
     public ImmutableUserWithAddressInheritance(Integer id, String name, ChildAddress address) {
+        validateParams(id, name, address);
+
         this.id = id;
         this.name = name;
         this.address = address;
+    }
+
+    private void validateParams(Integer id, String name, ChildAddress address) {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(address);
     }
 
     public Integer getId() {

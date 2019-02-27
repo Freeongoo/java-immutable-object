@@ -12,9 +12,17 @@ public final class ImmutableUserWithAddressDeepClone {
     private final Address address;
 
     public ImmutableUserWithAddressDeepClone(Integer id, String name, Address address) {
+        validateParams(id, name, address);
+
         this.id = id;
         this.name = name;
         this.address = address;
+    }
+
+    private void validateParams(Integer id, String name, Address address) {
+        Objects.requireNonNull(id);
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(address);
     }
 
     public Integer getId() {
