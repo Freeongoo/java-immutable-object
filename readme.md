@@ -1,12 +1,14 @@
 # Immutable Objects in Java
 
+Examples of the implementation of immutable objects in Java
+
 ## Primitive fields
 
 `/src/main/java/immutable/primitive/ImmutableUser.java`
 
 ## Collections
 
-`/home/vasya/IdeaProjects/java-immutable-object/src/main/java/immutable/collection/unmodifiable`
+`/src/main/java/immutable/collection/unmodifiable`
 
 ### Solutions
 
@@ -28,7 +30,8 @@
 
 `/src/main/java/immutable/withOtherLib/inheritance/ImmutableUserWithAddressInheritance.java`
 
-Bad solution - works well if a third-party object contains only primitive fields
+Bad solution - works well if a third-party object contains only primitive fields.
+If a third-party library has objects in field roles, then it is more difficult to perform inheritance.
 
 #### Deep clone
 
